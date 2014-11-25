@@ -6,9 +6,39 @@
 </description>
     <link>http://oiolong.github.io//</link>
     <atom:link href="http://oiolong.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 25 Nov 2014 14:14:54 +0800</pubDate>
-    <lastBuildDate>Tue, 25 Nov 2014 14:14:54 +0800</lastBuildDate>
+    <pubDate>Tue, 25 Nov 2014 17:32:58 +0800</pubDate>
+    <lastBuildDate>Tue, 25 Nov 2014 17:32:58 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>webpack : the next requireJS</title>
+        <description>&lt;p&gt;前端技术近几年告别刀耕火种的年代的重要标志就是RequireJS的诞生&lt;/p&gt;
+
+&lt;p&gt;mcfog &lt;a href=&quot;http://segmentfault.com/u/mcfog&quot;&gt;http://segmentfault.com/u/mcfog&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;认为webpack会取代RequireJS的利器webpack&lt;/p&gt;
+
+&lt;p&gt;下列是 mcfog 的见解&lt;/p&gt;
+
+&lt;p&gt;足迹小：在浏览器端代码非常少(minify不gzip 1k左右)，且不占用require define等名字，只占一个用于jsonp的webpackJsonp。
+同时支持 amd，cmd，没md等各种情况
+支持bower npm等等各种包管理
+强大的插件机制，丰富的自带插件，神CommonsChunkPlugin（自动提取多个入口JS的公共部分生成所谓的common.js）
+谁用谁知道&lt;/p&gt;
+
+&lt;p&gt;sources&lt;/p&gt;
+
+&lt;p&gt;[webpack] : &lt;a href=&quot;http://webpack.github.io/docs/&quot;&gt;http://webpack.github.io/docs/&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 26 Nov 2014 01:26:57 +0800</pubDate>
+        <link>http://oiolong.github.io//webpack/2014/11/26/the-next-requireJs-webpack.html</link>
+        <guid isPermaLink="true">http://oiolong.github.io//webpack/2014/11/26/the-next-requireJs-webpack.html</guid>
+        
+        
+        <category>webpack</category>
+        
+      </item>
     
       <item>
         <title>关于nginx php framework rewrite 的一些纪录</title>
