@@ -6,37 +6,75 @@
 </description>
     <link>http://oiolong.github.io//</link>
     <atom:link href="http://oiolong.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 25 Nov 2014 17:51:10 +0800</pubDate>
-    <lastBuildDate>Tue, 25 Nov 2014 17:51:10 +0800</lastBuildDate>
+    <pubDate>Tue, 25 Nov 2014 18:02:55 +0800</pubDate>
+    <lastBuildDate>Tue, 25 Nov 2014 18:02:55 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>webpack : the next requireJS</title>
-        <description>&lt;p&gt;前端技术近几年告别刀耕火种的年代的重要标志就是RequireJS的诞生&lt;/p&gt;
+        <title>react edge backbone requirejs (未)</title>
+        <description>&lt;p&gt;&lt;strong&gt;Compile nginx With GeoIP Module&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;mcfog &lt;a href=&quot;http://segmentfault.com/u/mcfog&quot;&gt;http://segmentfault.com/u/mcfog&lt;/a&gt; &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wget http://nginx.org/download/nginx-0.8.52.tar.gz
+ tar -zxvf nginx-0.8.52.tar.gz
+ cd nginx-0.8.52
+ yum install gcc pcre-devel.x86_64 openssl-devel.x86_64
+ ./configure --with-http_geoip_module
+ make
+ make install
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;认为webpack会取代RequireJS的利器webpack&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;nginx Configuration&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;下列是 mcfog 的见解&lt;/p&gt;
+&lt;p&gt;Edit nginx.conf, enter:&lt;/p&gt;
 
-&lt;p&gt;足迹小：在浏览器端代码非常少(minify不gzip 1k左右)，且不占用require define等名字，只占一个用于jsonp的webpackJsonp。
-同时支持 amd，cmd，没md等各种情况
-支持bower npm等等各种包管理
-强大的插件机制，丰富的自带插件，神CommonsChunkPlugin（自动提取多个入口JS的公共部分生成所谓的common.js）
-谁用谁知道&lt;/p&gt;
+&lt;p&gt;Locate http section and update it as follows for geoip country lookup:&lt;/p&gt;
+
+  	geoip_country /usr/local/share/GeoIP/GeoIP.dat;
+
+&lt;pre&gt;&lt;code&gt;fastcgi_param GEOIP_COUNTRY_CODE $geoip_country_code;
+fastcgi_param GEOIP_COUNTRY_CODE3 $geoip_country_code3;
+fastcgi_param GEOIP_COUNTRY_NAME $geoip_country_name;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Save and close the file. If you want city level geo targeting set it as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PHP Test Script&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Create a php test script as follows geoip.php&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;title&amp;gt;What is my IP address - determine or retrieve my IP address&amp;lt;/title&amp;gt;
+ &amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+ &amp;lt;?php
+     if (getenv(HTTP_X_FORWARDED_FOR)) {
+        $pipaddress = getenv(HTTP_X_FORWARDED_FOR);
+        $ipaddress = getenv(REMOTE_ADDR);
+        echo &quot;Your Proxy IP address is : &quot;.$pipaddress. &quot; (via $ipaddress) &quot; ;
+    } else {
+        $ipaddress = getenv(REMOTE_ADDR);
+        echo &quot;Your IP address is : $ipaddress&quot;;
+    }
+    $country = getenv(GEOIP_COUNTRY_NAME);
+    $country_code = getenv(GEOIP_COUNTRY_CODE);
+    echo &quot;&amp;lt;br/&amp;gt;Your country : $country ( $country_code ) &quot;;
+?&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;sources&lt;/p&gt;
 
-&lt;p&gt;[webpack] : &lt;a href=&quot;http://webpack.github.io/docs/&quot;&gt;http://webpack.github.io/docs/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[cyberciti] : &lt;a href=&quot;http://www.cyberciti.biz/faq/linux-unix-nginx-geoip-module-configuration/&quot;&gt;http://www.cyberciti.biz/faq/linux-unix-nginx-geoip-module-configuration/&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 26 Nov 2014 01:26:57 +0800</pubDate>
-        <link>http://oiolong.github.io//webpack/2014/11/26/the-next-requireJs-webpack.html</link>
-        <guid isPermaLink="true">http://oiolong.github.io//webpack/2014/11/26/the-next-requireJs-webpack.html</guid>
+        <pubDate>Wed, 26 Nov 2014 01:56:57 +0800</pubDate>
+        <link>http://oiolong.github.io//nginx/2014/11/26/nginx-Install-GeoIP-Module-For-Country-:-City-Level-Geo-Targeting.html</link>
+        <guid isPermaLink="true">http://oiolong.github.io//nginx/2014/11/26/nginx-Install-GeoIP-Module-For-Country-:-City-Level-Geo-Targeting.html</guid>
         
         
-        <category>webpack</category>
+        <category>nginx</category>
         
       </item>
     
@@ -67,9 +105,12 @@ To clone the React GitHub repo, use the following command:&lt;/p&gt;
 
 &lt;p&gt;Next, navigate to the new clone directory and install the required NPM modules:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;npm install Finally, build the distribution files, using Grunt:
+&lt;pre&gt;&lt;code&gt;npm install
+&lt;/code&gt;&lt;/pre&gt;
 
-grunt
+&lt;p&gt;Finally, build the distribution files, using Grunt:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;grunt
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;blockquote&gt;
@@ -167,12 +208,42 @@ I mentioned that the bootstrapping (entry-point) of the application code happens
 &lt;p&gt;[react-tutorials] : &lt;a href=&quot;https://medium.com/react-tutorials/react-edge-backbone-requirejs-15602e6f88fa&quot;&gt;https://medium.com/react-tutorials/react-edge-backbone-requirejs-15602e6f88fa&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 26 Nov 2014 01:26:57 +0800</pubDate>
+        <pubDate>Wed, 26 Nov 2014 01:54:57 +0800</pubDate>
         <link>http://oiolong.github.io//react/2014/11/26/react-edge-backbone-requirejs.html</link>
         <guid isPermaLink="true">http://oiolong.github.io//react/2014/11/26/react-edge-backbone-requirejs.html</guid>
         
         
         <category>react</category>
+        
+      </item>
+    
+      <item>
+        <title>webpack : the next requireJS</title>
+        <description>&lt;p&gt;前端技术近几年告别刀耕火种的年代的重要标志就是RequireJS的诞生&lt;/p&gt;
+
+&lt;p&gt;mcfog &lt;a href=&quot;http://segmentfault.com/u/mcfog&quot;&gt;http://segmentfault.com/u/mcfog&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;认为webpack会取代RequireJS的利器webpack&lt;/p&gt;
+
+&lt;p&gt;下列是 mcfog 的见解&lt;/p&gt;
+
+&lt;p&gt;足迹小：在浏览器端代码非常少(minify不gzip 1k左右)，且不占用require define等名字，只占一个用于jsonp的webpackJsonp。
+同时支持 amd，cmd，没md等各种情况
+支持bower npm等等各种包管理
+强大的插件机制，丰富的自带插件，神CommonsChunkPlugin（自动提取多个入口JS的公共部分生成所谓的common.js）
+谁用谁知道&lt;/p&gt;
+
+&lt;p&gt;sources&lt;/p&gt;
+
+&lt;p&gt;[webpack] : &lt;a href=&quot;http://webpack.github.io/docs/&quot;&gt;http://webpack.github.io/docs/&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 26 Nov 2014 01:26:57 +0800</pubDate>
+        <link>http://oiolong.github.io//webpack/2014/11/26/the-next-requireJs-webpack.html</link>
+        <guid isPermaLink="true">http://oiolong.github.io//webpack/2014/11/26/the-next-requireJs-webpack.html</guid>
+        
+        
+        <category>webpack</category>
         
       </item>
     
