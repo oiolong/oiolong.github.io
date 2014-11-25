@@ -6,12 +6,12 @@
 </description>
     <link>http://oiolong.github.io//</link>
     <atom:link href="http://oiolong.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 25 Nov 2014 18:02:55 +0800</pubDate>
-    <lastBuildDate>Tue, 25 Nov 2014 18:02:55 +0800</lastBuildDate>
+    <pubDate>Tue, 25 Nov 2014 18:07:25 +0800</pubDate>
+    <lastBuildDate>Tue, 25 Nov 2014 18:07:25 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>react edge backbone requirejs (未)</title>
+        <title>nginx 安装geoip 和php 设置</title>
         <description>&lt;p&gt;&lt;strong&gt;Compile nginx With GeoIP Module&lt;/strong&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;wget http://nginx.org/download/nginx-0.8.52.tar.gz
