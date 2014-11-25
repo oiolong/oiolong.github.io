@@ -6,8 +6,8 @@
 </description>
     <link>http://oiolong.github.io//</link>
     <atom:link href="http://oiolong.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 25 Nov 2014 17:32:58 +0800</pubDate>
-    <lastBuildDate>Tue, 25 Nov 2014 17:32:58 +0800</lastBuildDate>
+    <pubDate>Tue, 25 Nov 2014 17:51:10 +0800</pubDate>
+    <lastBuildDate>Tue, 25 Nov 2014 17:51:10 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -37,6 +37,142 @@
         
         
         <category>webpack</category>
+        
+      </item>
+    
+      <item>
+        <title>react edge backbone requirejs (未)</title>
+        <description>&lt;p&gt;&lt;strong&gt;React + Backbone + RequireJS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Last time we looked at how to use React to render views in combination with the Backbone router. Today we’ll see how to build the latest React version and load both React and Backbone using RequireJS.&lt;/p&gt;
+
+&lt;p&gt;RequireJS is a file/module loader library which is optimised for browser use. It’s often used in the structuring of large JavaScript codebases, to load modules on demand (asynchronously).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Please post any errors you find, or questions you have as comments on this article.
+Thanks to Wayne Berry, Ricardo Mendes and Thomas Coopman for helping to improve this!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Building Edge React&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The version you first see, on the React homepage (&lt;a href=&quot;http://facebook.github.io/react/index.html&quot;&gt;http://facebook.github.io/react/index.html&lt;/a&gt;) is not always the most up-to date version you could use. To get the latest version, we need to follow a few steps:&lt;/p&gt;
+
+&lt;p&gt;Clone the React GitHub repo.
+Install the required NPM modules.
+Build the distribution files.
+To clone the React GitHub repo, use the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/facebook/react.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next, navigate to the new clone directory and install the required NPM modules:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install Finally, build the distribution files, using Grunt:
+
+grunt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The first step assumes you have Git command-line utility installed (http://git-scm.com). The second, that you have NPM command-line utility installed (https://npmjs.org). The third, that you have Grunt command-line utility installed (http://gruntjs.com). I won’t walk you through installing them.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;After Grunt has finished compiling the React source-code, you will see a build folder, filled with compiled JavaScript files. The ones you are probably looking for are react[-with-addons].js and JSXTransformer.js. There are also NPM-friendly modules, if you’re looking to run React in Node.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;It’s not always the best idea to use an edge version of React. The version I just compiled is clearly marked as an alpha version, and these are not always production ready.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Using RequireJS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;RequireJS is just another JavaScript library. Download the source at: &lt;a href=&quot;http://requirejs.org/docs/download.html&quot;&gt;http://requirejs.org/docs/download.html&lt;/a&gt;. You’ll then need to include it in your HTML page:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script data-main=&quot;main.js&quot; src=&quot;require.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you’re structuring your JavaScript codebase the usual way, this will be the only script file you need to include directly. Everything else should be loaded asynchronously, and the origin of this loading will be the contents of main.js.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Every application needs an entry-point. The first bit of JavaScript to load all other JavaScript. That happens in main.js. You can call it whatever you like, but you should include it in the data-main attribute or RequireJS won’t know how to bootstrap your application code.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You can learn more about RequireJS at: &lt;a href=&quot;http://requirejs.org&quot;&gt;http://requirejs.org&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Holding Backbone’s Hand&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;RequireJS support is virtually non-existent in Backbone. I’m not sure why this should be, as it’s trivial to support RequireJS without sweeping changes to Backbone’s codebase, but there you have it.&lt;/p&gt;
+
+&lt;p&gt;As previously seen, Backbone requires jQuery (http://jquery.com/
+download) and Underscore (http://underscorejs.org), so go ahead and download these. Don’t link them yet, as we will do this in main.js.&lt;/p&gt;
+
+&lt;p&gt;These libraries typically register themselves in the global namespace. That’s on the opposite end of the spectrum to RequireJS. Unfortunately, Backbone doesn’t care, so we need to continue to include them in the global namespace for Backbone to work.&lt;/p&gt;
+
+&lt;p&gt;This is done, in RequireJS, with what’s called a shim configuration. My main.js file looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;require.config({
+  &quot;baseUrl&quot; : &quot;/js&quot;,
+  &quot;paths&quot;   : {
+    &quot;jquery&quot;     : &quot;path/to/jquery&quot;,
+    &quot;underscore&quot; : &quot;paht/to/underscore&quot;,
+    &quot;backbone&quot;   : &quot;path/to/backbone&quot;,
+    &quot;react&quot;      : &quot;path/to/react&quot;
+  },
+  &quot;shim&quot; : {
+    &quot;backbone&quot; : {
+      &quot;deps&quot; : [
+        &quot;jquery&quot;,
+        &quot;underscore&quot;
+      ],
+      &quot;exports&quot; : &quot;Backbone&quot;
+    },
+    &quot;jquery&quot; : {
+      &quot;exports&quot; : &quot;$&quot;
+    },
+    &quot;underscore&quot; : {
+      &quot;exports&quot; : &quot;_&quot;
+    }
+  }
+});
+ 
+require([&quot;backbone&quot;, &quot;router&quot;], function(Backbone, Router) {
+  new Router();
+  Backbone.history.start();
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;My router.js file looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;define([&quot;backbone&quot;], function(Backbone) {
+  return Backbone.Router.extend({
+    routes : {
+      &quot;&quot; : &quot;index&quot;
+    },
+    index : function() {
+      console.log(&quot;hello world&quot;);
+    }
+  });
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We’re doing a number of important things in the RequireJS configuration:&lt;/p&gt;
+
+&lt;p&gt;set the JavaScript root directory so RequireJS knows where to begin looking for module files.
+We define a number of module aliases. These are shortcut alternatives to defining the entire file path when needing to include a module like jquery.
+We create the shim configuration for Backbone, specifying dependencies, and what each of them export for Backbone’s use.
+I mentioned that the bootstrapping (entry-point) of the application code happens in main.js. That’s what the bottom bit is about — we require the router, instantiate it and start Backbone’s history. We could do this in an external module file, or whatever. It’s not important.&lt;/p&gt;
+
+&lt;p&gt;sources&lt;/p&gt;
+
+&lt;p&gt;[react-tutorials] : &lt;a href=&quot;https://medium.com/react-tutorials/react-edge-backbone-requirejs-15602e6f88fa&quot;&gt;https://medium.com/react-tutorials/react-edge-backbone-requirejs-15602e6f88fa&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 26 Nov 2014 01:26:57 +0800</pubDate>
+        <link>http://oiolong.github.io//react/2014/11/26/react-edge-backbone-requirejs.html</link>
+        <guid isPermaLink="true">http://oiolong.github.io//react/2014/11/26/react-edge-backbone-requirejs.html</guid>
+        
+        
+        <category>react</category>
         
       </item>
     
