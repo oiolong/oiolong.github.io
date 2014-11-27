@@ -6,9 +6,82 @@
 </description>
     <link>http://oiolong.github.io//</link>
     <atom:link href="http://oiolong.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 25 Nov 2014 18:07:25 +0800</pubDate>
-    <lastBuildDate>Tue, 25 Nov 2014 18:07:25 +0800</lastBuildDate>
+    <pubDate>Thu, 27 Nov 2014 14:05:36 +0800</pubDate>
+    <lastBuildDate>Thu, 27 Nov 2014 14:05:36 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>关于centos 快速搬移用户的一些纪录</title>
+        <description>&lt;p&gt;要从A服务器搬使用者到B服务器的一些方法&lt;/p&gt;
+
+&lt;p&gt;机器作搬移，想要偷懒用比较快速的方法做搬移&lt;/p&gt;
+
+&lt;p&gt;于是用上了rsync&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd /home
+rsync -av --delete ./* root@B/home/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;搬完过去后再把&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/etc/passwd
+/etc/group
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这两个档案把要的user 复制粘贴过去就好了&lt;/p&gt;
+
+&lt;p&gt;切换过去简单测试了一下，就以为结束了&lt;/p&gt;
+
+&lt;p&gt;后来有公司的同学反映ssh 不上去&lt;/p&gt;
+
+&lt;p&gt;看了一下log &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# tail -f /var/log/secure
+Nov 27 05:36:51 B sshd[8512]: fatal: Access denied for user jason by PAM account configuration
+Nov 27 05:36:53 B sshd[8514]: fatal: Access denied for user jason by PAM account configuration
+Nov 27 05:36:56 B sshd[8516]: fatal: Access denied for user jason by PAM account configuration
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;后来发现是 /etc/shadow 这个档案出了问题&lt;/p&gt;
+
+&lt;p&gt;再把相对应的user 拷过来就可以运行了&lt;/p&gt;
+
+&lt;p&gt;后来去cyberciti 查了一下，才了解到这个档案的用处。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q. Can you explain /etc/shadow file used under Linux or UNIX?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;A. /etc/shadow file stores actual password in encrypted format&lt;/em&gt;&lt;/strong&gt;
+for user’s account with additional properties related to user password i.e. it stores secure user account information. All fields are separated by a colon (:) symbol. It contains one entry per line for each user listed in /etc/passwd file Generally, shadow file entry looks as follows (click to enlarge image):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.cyberciti.biz/faqs/uploaded_images/shadow-file-795497.png&quot; alt=&quot;说明&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;1.&lt;strong&gt;User name&lt;/strong&gt; : It is your login name&lt;/p&gt;
+
+&lt;p&gt;2.&lt;strong&gt;Password&lt;/strong&gt; : It your encrypted password. The password should be minimum 6-8 characters long including special characters/digits&lt;/p&gt;
+
+&lt;p&gt;3.&lt;strong&gt;Last password change (lastchanged)&lt;/strong&gt; : Days since Jan 1, 1970 that password was last changed&lt;/p&gt;
+
+&lt;p&gt;4.&lt;strong&gt;Minimum&lt;/strong&gt; : The minimum number of days required between password changes i.e. the number of days left before the user is allowed to change his/her password&lt;/p&gt;
+
+&lt;p&gt;5.&lt;strong&gt;Maximum&lt;/strong&gt; : The maximum number of days the password is valid (after that user is forced to change his/her password)
+Warn : The number of days before password is to expire that user is warned that his/her password must be changed
+Inactive : The number of days after password expires that account is disabled&lt;/p&gt;
+
+&lt;p&gt;6.&lt;strong&gt;Expire&lt;/strong&gt; : days since Jan 1, 1970 that account is disabled i.e. an absolute date specifying when the login may no longer be used&lt;/p&gt;
+
+&lt;p&gt;[serverfault.com] : &lt;a href=&quot;http://serverfault.com/questions/540004/ssh-access-denied-by-pam-account-configuration-for-one-non-root-user-but-not&quot;&gt;http://serverfault.com/questions/540004/ssh-access-denied-by-pam-account-configuration-for-one-non-root-user-but-not&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[cyberciti.biz] : &lt;a href=&quot;http://www.cyberciti.biz/faq/understanding-etcshadow-file/&quot;&gt;http://www.cyberciti.biz/faq/understanding-etcshadow-file/&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 27 Nov 2014 21:52:57 +0800</pubDate>
+        <link>http://oiolong.github.io//linux/2014/11/27/move-users-to-another-server-tips.html</link>
+        <guid isPermaLink="true">http://oiolong.github.io//linux/2014/11/27/move-users-to-another-server-tips.html</guid>
+        
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>nginx 安装geoip 和php 设置</title>
