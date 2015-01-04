@@ -6,9 +6,320 @@
 </description>
     <link>http://oiolong.github.io//</link>
     <atom:link href="http://oiolong.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 31 Dec 2014 15:47:44 +0800</pubDate>
-    <lastBuildDate>Wed, 31 Dec 2014 15:47:44 +0800</lastBuildDate>
+    <pubDate>Sun, 04 Jan 2015 13:19:32 +0800</pubDate>
+    <lastBuildDate>Sun, 04 Jan 2015 13:19:32 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>码农周刊2014技术干货</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;【年终特刊】2014 年最受欢迎的技术干货&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;码农周刊第56期（2014-12-29）&lt;/h2&gt;
+
+&lt;p&gt;2014 年最后一期《码农周刊》，我们精选了往期最受欢迎的技术干货，希望各位喜欢。&lt;/p&gt;
+
+&lt;p&gt;过去的一年，感谢用户、客户们一如既往地支持。爱你们！&lt;/p&gt;
+
+&lt;p&gt;我们的新产品：&lt;a href=&quot;http://toutiao.io/&amp;amp;aid=1497&amp;amp;nid=56&quot;&gt;开发者头条 toutiao.io&lt;/a&gt; ，欢迎支持。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.coding.net/blog/why-coding-does-not-equals-github&amp;amp;aid=1762&amp;amp;nid=56&quot;&gt;为什么Coding 不是中国版 GitHub？&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;特别推荐&lt;/h3&gt;
+
+&lt;h4 id=&quot;httpsgithubcomnemotyrantmanongampaid1762ampnid56&quot;&gt;&lt;a href=&quot;https://github.com/nemoTyrant/manong&amp;amp;aid=1762&amp;amp;nid=56&quot;&gt;《码农周刊》分类整理&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;再次感谢 &lt;a href=&quot;http://weibo.com/u/1265894615&quot;&gt;@nemothetyrant&lt;/a&gt; 同学的辛苦整理，目前已同步至第 54 期。Star 数已过 1200，欢迎关注。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;最受欢迎的技术干货（程序设计篇）&lt;/h3&gt;
+
+&lt;h4 id=&quot;httpwwwbitstechnet20140107log-best-practiceampaid393&quot;&gt;&lt;a href=&quot;http://www.bitstech.net/2014/01/07/log-best-practice/&amp;amp;aid=393&quot;&gt;最佳日志实践（王健）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;日志看似小事，实则运维的大事。via &lt;a href=&quot;http://weibo.com/breezes&quot;&gt;@网易汪源&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;httpcoolshellcnarticles10910htmlampaid423ampnid56&quot;&gt;&lt;a href=&quot;http://coolshell.cn/articles/10910.html&amp;amp;aid=423&amp;amp;nid=56&quot;&gt;分布式系统的事务处理（@左耳朵耗子）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;本文系统地介绍了用于处理分布式数据一致性的技术模型，如：Master-Slave、Master-Master、2PC/3PC、经典的将军问题、Paxos 以及 Dynamo 的 NRW 和 VectorClock 的模型。&lt;/p&gt;
+
+&lt;h4 id=&quot;httpblogcodingnowcom201403mmzbdbhtmlampaid647ampnid56&quot;&gt;&lt;a href=&quot;http://blog.codingnow.com/2014/03/mmzb_db.html&amp;amp;aid=647&amp;amp;nid=56&quot;&gt;系列文章：谈谈陌陌争霸在数据库方面踩过的坑（@简悦云风）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;此为前篇，另外三篇：&lt;a href=&quot;http://blog.codingnow.com/2014/03/mmzb_db_2.html&quot;&gt;排行榜篇&lt;/a&gt;、&lt;a href=&quot;http://blog.codingnow.com/2014/03/mmzb_mongodb.html&quot;&gt;MongoDB 篇&lt;/a&gt;和 &lt;a href=&quot;http://blog.codingnow.com/2014/03/mmzb_redis.html&quot;&gt;Redis 篇&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;whatsapp-httphighscalabilitycomblog2014331how-whatsapp-grew-to-nearly-500-million-users-11000-cores-anhtmlampaid868ampnid56&quot;&gt;&lt;a href=&quot;http://highscalability.com/blog/2014/3/31/how-whatsapp-grew-to-nearly-500-million-users-11000-cores-an.html&amp;amp;aid=868&amp;amp;nid=56&quot;&gt;WhatsApp 架构设计（最新版）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;来自 High Scalability。相较&lt;a href=&quot;http://highscalability.com/blog/2014/2/26/the-whatsapp-architecture-facebook-bought-for-19-billion.html&quot;&gt;上篇&lt;/a&gt;，这篇内容更新、更全。&lt;a href=&quot;http://www.csdn.net/article/2014-04-04/2819158-how-whatsapp-grew-to-nearly-500-million-users-11000-cores-an&quot;&gt;译文&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;pdf-linux--eduardo-ciliendo-amp-takechika-kunimasahttpwwwredbooksibmcomredpaperspdfsredp4285pdfampaid1164ampnid56&quot;&gt;&lt;a href=&quot;http://www.redbooks.ibm.com/redpapers/pdfs/redp4285.pdf&amp;amp;aid=1164&amp;amp;nid=56&quot;&gt;[PDF] Linux 性能及调优指南 (Eduardo Ciliendo &amp;amp; Takechika Kunimasa)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;IBM 出品，不算新，但足够经典。感谢 &lt;a href=&quot;http://weibo.com/u/2216172320&quot;&gt;@何_登成&lt;/a&gt; 的分享。&lt;/p&gt;
+
+&lt;h4 id=&quot;httpblogaliyuncom967ampaid1212ampnid56&quot;&gt;&lt;a href=&quot;http://blog.aliyun.com/967&amp;amp;aid=1212&amp;amp;nid=56&quot;&gt;图片服务架构演进（孔凡勇）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;从传统互联网的 Web 1.0，历经 Web 2.0 时代以及发展到现在的 Web 3.0，随着图片存储规模的增加，图片服务器的架构也在逐渐发生变化。（感谢 &lt;a href=&quot;http://weibo.com/p/1005051750122417&quot;&gt;@aliyun-云狄&lt;/a&gt; 投稿）&lt;/p&gt;
+
+&lt;h4 id=&quot;stackoverflow-httpwwwcsdnnetarticle2014-07-222820774-stackoverflow-update-560m-pageviews-a-month-25-serversampaid1269ampnid56&quot;&gt;&lt;a href=&quot;http://www.csdn.net/article/2014-07-22/2820774-stackoverflow-update-560m-pageviews-a-month-25-servers&amp;amp;aid=1269&amp;amp;nid=56&quot;&gt;[译] 25 台服务器是怎样支撑 StackOverflow 的？（仲浩）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;StackOverflow 是程序员必上的网站之一，本文介绍了它的架构设计。&lt;a href=&quot;http://highscalability.com/blog/2014/7/21/stackoverflow-update-560m-pageviews-a-month-25-servers-and-i.html&quot;&gt;原文地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;pdf-httpvdiskweibocomsq8fzmjo4w2qqampaid1356ampnid56&quot;&gt;&lt;a href=&quot;http://vdisk.weibo.com/s/q8FZMJO4W2qq&amp;amp;aid=1356&amp;amp;nid=56&quot;&gt;[PDF] 蔡学镛架构设计方法（最新版）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;有用有料，下载过万。&lt;/p&gt;
+
+&lt;h4 id=&quot;heroku--http-api-httpwwwinfoqcomcnnews201409heroku-http-design-guideampaid1394ampnid56&quot;&gt;&lt;a href=&quot;http://www.infoq.com/cn/news/2014/09/heroku-http-design-guide&amp;amp;aid=1394&amp;amp;nid=56&quot;&gt;[译] Heroku 的 HTTP API 设计指南（赵震一）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;这份&lt;a href=&quot;https://github.com/interagent/http-api-design&quot;&gt;设计指南&lt;/a&gt;很火，GitHub 上 Star 数已过 6000。&lt;/p&gt;
+
+&lt;h4 id=&quot;pdf--mysql--httpvdiskweibocomsvxkr-hwxrnij1414422630ampaid1555ampnid56&quot;&gt;&lt;a href=&quot;http://vdisk.weibo.com/s/vxKR-hwXRnIj/1414422630&amp;amp;aid=1555&amp;amp;nid=56&quot;&gt;[PDF] 一步到位实现 MySQL 优化 (@叶金荣)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;从硬件、系统、配置、设计等多角度优化 MySQL&lt;/p&gt;
+
+&lt;h4 id=&quot;httpwwwcsdnnetarticle2014-11-042822459ampaid1628ampnid56&quot;&gt;&lt;a href=&quot;http://www.csdn.net/article/2014-11-04/2822459&amp;amp;aid=1628&amp;amp;nid=56&quot;&gt;电商峰值系统架构设计 (@程序员杂志)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;来自京东、当当、小米等电商的最佳技术实践分享&lt;/p&gt;
+
+&lt;h4 id=&quot;lucida--penggonghttpzhlucidamebloglucida-pinyin-converterampaid1711ampnid56&quot;&gt;&lt;a href=&quot;http://zh.lucida.me/blog/lucida-pinyin-converter/&amp;amp;aid=1711&amp;amp;nid=56&quot;&gt;从 2000 毫秒到 10 毫秒——Lucida 拼音库的设计与实现 (@peng_gong)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Lucida 拼音库以微软拼音库为基础，能够快速的把汉字转化为对应的拼音，它比微软拼音库快 200 多倍，同时占用内存不到微软拼音库的八分之一。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;最受欢迎的技术干货（编程语言篇）&lt;/h3&gt;
+
+&lt;h4 id=&quot;scala-yankayhttpzhscala-tourcomampaid404ampnid56&quot;&gt;&lt;a href=&quot;http://zh.scala-tour.com/&amp;amp;aid=404&amp;amp;nid=56&quot;&gt;Scala 指南（@yankay）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;一个学习 Scala 精彩特性的网站，非常棒！&lt;/p&gt;
+
+&lt;h4 id=&quot;java-httpwwwprogramcreekcomsimple-javaampaid426ampnid56&quot;&gt;&lt;a href=&quot;http://www.programcreek.com/simple-java/&amp;amp;aid=426&amp;amp;nid=56&quot;&gt;90个高质量的 Java 问答&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;面试备用吧！&lt;a href=&quot;http://www.programcreek.com/2013/01/simple-java-download/&quot;&gt;PDF 下载地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;c--peter-fackahttppfackabinaryparadisecomarticlesguide-to-advanced-programming-in-chtmlampaid465ampnid56&quot;&gt;&lt;a href=&quot;http://pfacka.binaryparadise.com/articles/guide-to-advanced-programming-in-C.html&amp;amp;aid=465&amp;amp;nid=56&quot;&gt;C 语言高级编程指南 (Peter Facka)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;C 语言进阶教程，讲解细致。&lt;/p&gt;
+
+&lt;h4 id=&quot;python-matt-makaihttpwwwfullstackpythoncomampaid476ampnid56&quot;&gt;&lt;a href=&quot;http://www.fullstackpython.com/&amp;amp;aid=476&amp;amp;nid=56&quot;&gt;全栈 Python (Matt Makai)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;一站式 Python 学习网站，覆盖 Python 学习的方方面面。&lt;/p&gt;
+
+&lt;h4 id=&quot;nodejshttpnqdenggithubio7-days-nodejsampaid510ampnid56&quot;&gt;&lt;a href=&quot;http://nqdeng.github.io/7-days-nodejs/&amp;amp;aid=510&amp;amp;nid=56&quot;&gt;七天学会 NodeJS&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;不错的入门教程，阿里巴巴国际站前端技术部出品。&lt;/p&gt;
+
+&lt;h4 id=&quot;python-httpwwwliaoxuefengcomwiki001374738125095c955c1e6d8bb493182103fac9270762a000ampaid655ampnid56&quot;&gt;&lt;a href=&quot;http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000&amp;amp;aid=655&amp;amp;nid=56&quot;&gt;Python 入门教程（@廖雪峰）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;非常不错，推荐。&lt;/p&gt;
+
+&lt;h4 id=&quot;cgopython--qyuhenhttpsgithubcomqyuhenbookampaid828ampnid56&quot;&gt;&lt;a href=&quot;https://github.com/qyuhen/book&amp;amp;aid=828&amp;amp;nid=56&quot;&gt;C/Go/Python 学习笔记 (qyuhen)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;这兄弟笔记写的太详细认真了，完全超出我的想象。一本 Go，一本 C，一本 Python。值得推荐。via &lt;a href=&quot;http://weibo.com/marchliu&quot;&gt;@刘鑫Mars&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;php--jamie-york-ziadozhttpsgithubcomziadozawesome-phpampaid878ampnid56&quot;&gt;&lt;a href=&quot;https://github.com/ziadoz/awesome-php&amp;amp;aid=878&amp;amp;nid=56&quot;&gt;PHP 学习资源列表 (Jamie York ziadoz)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;非常棒！PHPer 果断 fork 吧！&lt;/p&gt;
+
+&lt;h4 id=&quot;angularjs-leon-revillhttpwwwrevillwebcomtutorialsangularjs-in-30-minutes-angularjs-tutorialampaid949ampnid56&quot;&gt;&lt;a href=&quot;http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/&amp;amp;aid=949&amp;amp;nid=56&quot;&gt;30 分钟学会 AngularJS (Leon Revill)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;同时推荐&lt;a href=&quot;https://medium.com/on-coding/8c7dc63ca65f&quot;&gt;写给设计师的 AngularJS 教程&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;cache--ruby-china--huacnleehttpsruby-chinaorgtopics19436ampaid1082ampnid56&quot;&gt;&lt;a href=&quot;https://ruby-china.org/topics/19436&amp;amp;aid=1082&amp;amp;nid=56&quot;&gt;Cache 在 Ruby China 里面的应用 (@huacnlee)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;来自 Ruby China 的实战经验&lt;/p&gt;
+
+&lt;h4 id=&quot;the-swift-programming-language-swifthttpwwwswiftguidecnampaid1154ampnid56&quot;&gt;&lt;a href=&quot;http://www.swiftguide.cn/&amp;amp;aid=1154&amp;amp;nid=56&quot;&gt;The Swift Programming Language 中文版（@Swift中文翻译组）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;更多 Swift 干货 → &lt;a href=&quot;http://swift.manong.io/&quot;&gt;《Swift 特刊》&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;css-shapehttpzhuanlanzhihucomthefrontendperiodicals19774074ampaid1163ampnid56&quot;&gt;&lt;a href=&quot;http://zhuanlan.zhihu.com/thefrontendperiodicals/19774074&amp;amp;aid=1163&amp;amp;nid=56&quot;&gt;[译] 深入浅出 CSS Shape（@寸志）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;很棒的翻译，感谢译者。&lt;/p&gt;
+
+&lt;h4 id=&quot;ios-8--david-liuhttpnshipstercnios8ampaid1216ampnid56&quot;&gt;&lt;a href=&quot;http://nshipster.cn/ios8/&amp;amp;aid=1216&amp;amp;nid=56&quot;&gt;[译] iOS 8 新特性 (David Liu)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;来自大神 Mattt Thompson，&lt;a href=&quot;http://nshipster.com/ios8/&quot;&gt;原文地址&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h4 id=&quot;python-----httphujiaweibujidaogithubiopythonampaid1218ampnid56&quot;&gt;&lt;a href=&quot;http://hujiaweibujidao.github.io/python/&amp;amp;aid=1218&amp;amp;nid=56&quot;&gt;Python 基础知识 + 数据结构 + 算法设计（@五道口宅男）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;非常不错的 Python 学习资料合集，感谢作者。（感谢 &lt;a href=&quot;http://weibo.com/u/2187696053&quot;&gt;@阿弥陀佛一页书&lt;/a&gt; 投稿）&lt;/p&gt;
+
+&lt;h4 id=&quot;golang-httpblogcsdnnetghj1976articledetails27996095ampaid1250ampnid56&quot;&gt;&lt;a href=&quot;http://blog.csdn.net/ghj1976/article/details/27996095&amp;amp;aid=1250&amp;amp;nid=56&quot;&gt;Golang 适合高并发场景的原因分析（@蝈蝈俊）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;文中附有不少高质量的参考资料&lt;/p&gt;
+
+&lt;h4 id=&quot;c-httpstackoverflowcomquestions388242the-definitive-c-book-guide-and-listampaid1272ampnid56&quot;&gt;&lt;a href=&quot;http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list&amp;amp;aid=1272&amp;amp;nid=56&quot;&gt;C++ 权威书籍指南&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Stack Overflow 上的一篇热帖，阅读量已破 70w。同时推荐 &lt;a href=&quot;http://stackoverflow.com/questions/562303/the-definitive-c-book-guide-and-list&quot;&gt;C 权威书籍指南&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;pdf-javascript--addy-osmanihttpsspeakerdeckcomaddyosmanijavascript-memory-management-masterclassampaid1403ampnid56&quot;&gt;&lt;a href=&quot;https://speakerdeck.com/addyosmani/javascript-memory-management-masterclass&amp;amp;aid=1403&amp;amp;nid=56&quot;&gt;[PDF] JavaScript 内存管理 (Addy Osmani)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;足足 139 页的干货分享&lt;/p&gt;
+
+&lt;h4 id=&quot;go--go-httpwwwinfoqcomcnarticlesgo-language-introductionampaid1485ampnid56&quot;&gt;&lt;a href=&quot;http://www.infoq.com/cn/articles/go-language-introduction&amp;amp;aid=1485&amp;amp;nid=56&quot;&gt;Go 并发编程之 Go 语言概述（郝林）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;不错的入门介绍&lt;/p&gt;
+
+&lt;h4 id=&quot;nodejs--alsotanghttpsgithubcomalsotangnode-lessonsampaid1507ampnid56&quot;&gt;&lt;a href=&quot;https://github.com/alsotang/node-lessons&amp;amp;aid=1507&amp;amp;nid=56&quot;&gt;Node.js 包教不包会 (alsotang)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;侧重实战的 Node.js 教程&lt;/p&gt;
+
+&lt;h4 id=&quot;zsh--joejaghttpcodejoejagcom2014why-zshhtmlampaid1638ampnid56&quot;&gt;&lt;a href=&quot;http://code.joejag.com/2014/why-zsh.html&amp;amp;aid=1638&amp;amp;nid=56&quot;&gt;我最爱的 Zsh 特征 (JoeJag)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;终极 Shell，N 多大招。&lt;/p&gt;
+
+&lt;h4 id=&quot;pdf-erlang-in-anger--denghuijzhttpvdiskweibocomsigq-rfuju0-4ampaid1689ampnid56&quot;&gt;&lt;a href=&quot;http://vdisk.weibo.com/s/iGQ-rFuJU0-4&amp;amp;aid=1689&amp;amp;nid=56&quot;&gt;[PDF] Erlang in Anger 中文版 (@DengHui_JZ)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;感谢译者&lt;/p&gt;
+
+&lt;h4 id=&quot;r--john-d-cookhttpwwwjohndcookcomblogrlanguageforprogrammersampaid1718ampnid56&quot;&gt;&lt;a href=&quot;http://www.johndcook.com/blog/r_language_for_programmers/&amp;amp;aid=1718&amp;amp;nid=56&quot;&gt;R 语言学习笔记 (John D. Cook)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;很不错&lt;/p&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;最受欢迎的技术干货（工具资料篇）&lt;/h3&gt;
+
+&lt;h4 id=&quot;httpwwwcsusfcaedugallesvisualizationalgorithmshtmlampaid363ampnid56&quot;&gt;&lt;a href=&quot;http://www.cs.usfca.edu/~galles/visualization/Algorithms.html&amp;amp;aid=363&amp;amp;nid=56&quot;&gt;一个超赞的数据结构可视化站点&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;图形化的演示，超赞！&lt;a href=&quot;http://mover.sinaapp.com/Algorithms.html&quot;&gt;汉化版&lt;/a&gt;（感谢作者 &lt;a href=&quot;http://weibo.com/wlcxiying&quot;&gt;@IT好码农&lt;/a&gt; ）&lt;/p&gt;
+
+&lt;h4 id=&quot;httpwwwzhihucomquestion22420900ampaid407ampnid56&quot;&gt;&lt;a href=&quot;http://www.zhihu.com/question/22420900&amp;amp;aid=407&amp;amp;nid=56&quot;&gt;怎样成为全栈工程师？（@知乎）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;一些回答很受启发，推荐。&lt;/p&gt;
+
+&lt;h4 id=&quot;stackedit----markdown-httpsstackeditioampaid669ampnid56&quot;&gt;&lt;a href=&quot;https://stackedit.io/&amp;amp;aid=669&amp;amp;nid=56&quot;&gt;StackEdit - 一个好用的 markdown 编辑器&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;用过的都说好！&lt;/p&gt;
+
+&lt;h4 id=&quot;zip--v22httpvdiskweibocomsepyle0kt9mowampaid773ampnid56&quot;&gt;&lt;a href=&quot;http://vdisk.weibo.com/s/EPyLE0kt9Mow&amp;amp;aid=773&amp;amp;nid=56&quot;&gt;[ZIP] 知道创宇研发技能表 v2.2（@余弦）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;从通用技能（沟通、成长等）、专业技能（Web 安全、研发清单等）、设计思想到优质资源，应有尽有。&lt;/p&gt;
+
+&lt;h4 id=&quot;httpsgithubcompapers-we-lovepapers-we-loveampaid839ampnid56&quot;&gt;&lt;a href=&quot;https://github.com/papers-we-love/papers-we-love&amp;amp;aid=839&amp;amp;nid=56&quot;&gt;大量计算机科学经典论文&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;分类清晰&lt;/p&gt;
+
+&lt;h4 id=&quot;gitbook----githubgit--markdown-httpwwwgitbookioampaid893ampnid56&quot;&gt;&lt;a href=&quot;http://www.gitbook.io/&amp;amp;aid=893&amp;amp;nid=56&quot;&gt;GitBook - 一个使用 GitHub/Git 和 Markdown 制作编程书籍的命令行工具&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/GitbookIO/gitbook&quot;&gt;GitHub 地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;github-httpsguidesgithubcomoverviewsos-contributingampaid917ampnid56&quot;&gt;&lt;a href=&quot;https://guides.github.com/overviews/os-contributing/&amp;amp;aid=917&amp;amp;nid=56&quot;&gt;如何参与一个 GitHub 开源项目？&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;GitHub 官方指南，非常棒。&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MjM5MzA0ODkyMA==&amp;amp;mid=200909764&amp;amp;idx=1&amp;amp;sn=5184c6637977a94916508379b194f3e0&quot;&gt;译文&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;justjavachttpscodecsdnnetjustjavacfree-programming-books-zhcnampaid919ampnid56&quot;&gt;&lt;a href=&quot;https://code.csdn.net/JustJavaC/free-programming-books-zh_cn&amp;amp;aid=919&amp;amp;nid=56&quot;&gt;免费的编程中文书籍索引 (JustJavaC)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;感谢 &lt;a href=&quot;http://weibo.com/hidoslin&quot;&gt;@Hi_DosLin&lt;/a&gt; 的推荐&lt;/p&gt;
+
+&lt;h4 id=&quot;iteyehttpwwwiteyecommagazines130ampaid984ampnid56&quot;&gt;&lt;a href=&quot;http://www.iteye.com/magazines/130&amp;amp;aid=984&amp;amp;nid=56&quot;&gt;编程精华资源大汇总 (ITeye)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;点个赞！&lt;/p&gt;
+
+&lt;h4 id=&quot;httpwwwibmcomdeveloperworkscnweb1404wangfxjsframeworksampaid1055ampnid56&quot;&gt;&lt;a href=&quot;http://www.ibm.com/developerworks/cn/web/1404_wangfx_jsframeworks/&amp;amp;aid=1055&amp;amp;nid=56&quot;&gt;前端开发框架对比（王芳侠）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;本文选取了 Bootstrap、jQuery UI、jQuery Mobile 等 16 个国内外前端开发框架进行初步的横向比较，可以作为大家挑选前端开发框架的初步参考。&lt;/p&gt;
+
+&lt;h4 id=&quot;teylahttparticleyeeyanorgview22139410514ampaid1169ampnid56&quot;&gt;&lt;a href=&quot;http://article.yeeyan.org/view/22139/410514&amp;amp;aid=1169&amp;amp;nid=56&quot;&gt;[译] 机器学习最佳入门学习资料汇总 (teyla)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;不错的整理&lt;/p&gt;
+
+&lt;h4 id=&quot;vim-httpvimawesomecomampaid1226ampnid56&quot;&gt;&lt;a href=&quot;http://vimawesome.com/&amp;amp;aid=1226&amp;amp;nid=56&quot;&gt;Vim 插件合集&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;应有尽有！&lt;/p&gt;
+
+&lt;h4 id=&quot;docker--yeasyhttpswwwgitbookiobookyeasydockerpracticeampaid1459ampnid56&quot;&gt;&lt;a href=&quot;https://www.gitbook.io/book/yeasy/docker_practice&amp;amp;aid=1459&amp;amp;nid=56&quot;&gt;开源电子书《Docker 从入门到实践》 (yeasy)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;非常棒，感谢作者。&lt;/p&gt;
+
+&lt;h4 id=&quot;linux-httpbillie66githubiotlclampaid1513ampnid56&quot;&gt;&lt;a href=&quot;http://billie66.github.io/TLCL/&amp;amp;aid=1513&amp;amp;nid=56&quot;&gt;《Linux 命令行》中文版（好奇猫团队）&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;为译者们点赞！&lt;/p&gt;
+
+&lt;h4 id=&quot;pro-git-scott-chaconhttpgit-scmcombookenv2ampaid1564ampnid56&quot;&gt;&lt;a href=&quot;http://git-scm.com/book/en/v2&amp;amp;aid=1564&amp;amp;nid=56&quot;&gt;免费电子书《Pro Git》第二版发布 (Scott Chacon)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;很多人是看着这本书入门 Git 的&lt;/p&gt;
+
+&lt;h4 id=&quot;httpcoderlmngithubiocode-standardsampaid1603ampnid56&quot;&gt;&lt;a href=&quot;http://coderlmn.github.io/code-standards/&amp;amp;aid=1603&amp;amp;nid=56&quot;&gt;[译] 前端代码规范及最佳实践 (@老码农的自留地)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;本文档包含了 Isobar 公司的创意技术部（前端工程）开发 Web 应用的规范&lt;/p&gt;
+
+&lt;h4 id=&quot;pyspider----python--binuxhttpsgithubcombinuxpyspiderampaid1644ampnid56&quot;&gt;&lt;a href=&quot;https://github.com/binux/pyspider&amp;amp;aid=1644&amp;amp;nid=56&quot;&gt;pyspider - 一个 Python 实现的强大的爬虫系统 (binux)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;国人作品&lt;/p&gt;
+
+&lt;h4 id=&quot;linux--2014-brendan-gregghttpwwwbrendangreggcomblog2014-11-22linux-perf-tools-2014htmlampaid1666ampnid56&quot;&gt;&lt;a href=&quot;http://www.brendangregg.com/blog/2014-11-22/linux-perf-tools-2014.html&amp;amp;aid=1666&amp;amp;nid=56&quot;&gt;Linux 性能工具 2014 (Brendan Gregg)&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;最新版，强烈推荐。&lt;/p&gt;
+
+&lt;h4 id=&quot;html5-httpwwwjikexueyuancomeventhtml5htmlhmsrmanongtoolhtml5event5ampaid1763ampnid56&quot;&gt;&lt;a href=&quot;http://www.jikexueyuan.com/event/html5.html?hmsr=manong_tool_html5event_5&amp;amp;aid=1763&amp;amp;nid=56&quot;&gt;最棒的 HTML5 视频教程&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;10 阶段学习，从入门到精通，在线答疑互动，资源一键下载。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-6&quot;&gt;最受欢迎的技术干货（精品课程篇）&lt;/h3&gt;
+
+&lt;h4 id=&quot;linux-httpslugustceducnopencourseampaid1585ampnid56&quot;&gt;&lt;a href=&quot;https://lug.ustc.edu.cn/OpenCourse/&amp;amp;aid=1585&amp;amp;nid=56&quot;&gt;Linux 入门公开课&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;九课时，一步步带你入门。&lt;/p&gt;
+
+&lt;h4 id=&quot;python-httpmoocstudy163comcourseyookcs0001-1000002017infoampaid1623ampnid56&quot;&gt;&lt;a href=&quot;http://mooc.study.163.com/course/YOOKCS0001-1000002017#/info&amp;amp;aid=1623&amp;amp;nid=56&quot;&gt;Python 程序设计入门&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;面向无编程基础的学生，培养运用 Python 编程语言解决实际问题的编程能力。&lt;/p&gt;
+
+&lt;h4 id=&quot;httpswwwcourseraorgcoursentumloneampaid1625ampnid56&quot;&gt;&lt;a href=&quot;https://www.coursera.org/course/ntumlone&amp;amp;aid=1625&amp;amp;nid=56&quot;&gt;机器学习基石&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;来自台大的课程，将介绍各领域中的机器学习使用者都应该知道的基础演算法、理论及实务工具。&lt;/p&gt;
+
+&lt;h4 id=&quot;android-httpswwwcourseraorgcourseandroidapps101ampaid1704ampnid56&quot;&gt;&lt;a href=&quot;https://www.coursera.org/course/androidapps101&amp;amp;aid=1704&amp;amp;nid=56&quot;&gt;创新、严肃、好玩的 Android 应用程序开发&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;课程轻松愉快，适合初学者，不需要任何编程基础。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-7&quot;&gt;最受欢迎的编程书籍&lt;/h3&gt;
+
+&lt;h4 id=&quot;httpwwwamazoncngpproductb00hy8six2refaslitftlieutf8camp536creative3200creativeasinb00hy8six2linkcodeas2tagmanongio-23ampaid499ampnid56smallmiloyipsmallhttpweibocommiloyip&quot;&gt;&lt;a href=&quot;http://www.amazon.cn/gp/product/B00HY8SIX2/ref=as_li_tf_tl?ie=UTF8&amp;amp;camp=536&amp;amp;creative=3200&amp;amp;creativeASIN=B00HY8SIX2&amp;amp;linkCode=as2&amp;amp;tag=manongio-23&amp;amp;aid=499&amp;amp;nid=56&quot;&gt;《游戏引擎架构》&lt;/a&gt;&lt;a href=&quot;http://weibo.com/miloyip&quot;&gt;&lt;small&gt;@miloyip&lt;/small&gt;&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;本书同时涵盖游戏引擎软件开发的理论及实践，并对多方面的题目进行探讨。译者叶劲峰（@miloyip）现任腾讯互娱研发部 T4 技术专家，曾开发《爱丽丝惊魂记︰疯狂再临》、《美食从天而降》和《王子传奇》。&lt;/p&gt;
+
+&lt;h4 id=&quot;java-httpwwwamazoncngpproductb00ju5c2n4refaslitftlieutf8camp536creative3200creativeasinb00ju5c2n4linkcodeas2tagmanongio-23ampaid1004ampnid56smallsmallhttpweibocomvanadies10&quot;&gt;&lt;a href=&quot;http://www.amazon.cn/gp/product/B00JU5C2N4/ref=as_li_tf_tl?ie=UTF8&amp;amp;camp=536&amp;amp;creative=3200&amp;amp;creativeASIN=B00JU5C2N4&amp;amp;linkCode=as2&amp;amp;tag=manongio-23&amp;amp;aid=1004&amp;amp;nid=56&quot;&gt;《大型网站系统与 Java 中间件实践》&lt;/a&gt;&lt;a href=&quot;http://weibo.com/vanadies10&quot;&gt;&lt;small&gt;曾宪杰&lt;/small&gt;&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;本书出自淘宝技术部总监之手，经验直接来自淘宝服务框架、消息中间件及数据访问层。&lt;/p&gt;
+
+&lt;h4 id=&quot;httpwwwamazoncngpproductb00kfm43corefaslitftlieutf8camp536creative3200creativeasinb00kfm43colinkcodeas2tagmanongio-23ampaid1153ampnid56smallchristopher-steinersmallhttpwwwchrissteinercom&quot;&gt;&lt;a href=&quot;http://www.amazon.cn/gp/product/B00KFM43CO/ref=as_li_tf_tl?ie=UTF8&amp;amp;camp=536&amp;amp;creative=3200&amp;amp;creativeASIN=B00KFM43CO&amp;amp;linkCode=as2&amp;amp;tag=manongio-23&amp;amp;aid=1153&amp;amp;nid=56&quot;&gt;《算法帝国》&lt;/a&gt;&lt;a href=&quot;http://www.chrissteiner.com/&quot;&gt;&lt;small&gt;Christopher Steiner&lt;/small&gt;&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;《纽约时报》畅销书作者斯坦纳的又一力作，通过一个又一个引人入胜的故事，向读者介绍了算法掌控世界的真实情况，揭示了“机器人革命”是如何悄然在我们身边发生的。&lt;/p&gt;
+
+&lt;h4 id=&quot;unix--3-httpwwwamazoncngpproductb00kmr129erefaslitftlieutf8camp536creative3200creativeasinb00kmr129elinkcodeas2tagmanongio-23ampaid1182ampnid56smallw-richard-stevens-amp-stephen-a-ragosmallhttpwwwapuebookcomapue3ehtml&quot;&gt;&lt;a href=&quot;http://www.amazon.cn/gp/product/B00KMR129E/ref=as_li_tf_tl?ie=UTF8&amp;amp;camp=536&amp;amp;creative=3200&amp;amp;creativeASIN=B00KMR129E&amp;amp;linkCode=as2&amp;amp;tag=manongio-23&amp;amp;aid=1182&amp;amp;nid=56&quot;&gt;《UNIX 环境高级编程（第 3 版）》&lt;/a&gt;&lt;a href=&quot;http://www.apuebook.com/apue3e.html&quot;&gt;&lt;small&gt;W. Richard Stevens &amp;amp; Stephen A. Rago&lt;/small&gt;&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;本书是被誉为 UNIX 编程“圣经”的 Advanced Programming in the UNIX Environment 一书的第 3 版，是一本 UNIX/Linux 程序员不可或缺的参考书。&lt;/p&gt;
+
+&lt;h4 id=&quot;redis-httpwwwamazoncngpproductb00l4xhh0srefaslitftlieutf8camp536creative3200creativeasinb00l4xhh0slinkcodeas2tagmanongio-23ampaid1210ampnid56smallsmallhttpweibocomhuangz1990&quot;&gt;&lt;a href=&quot;http://www.amazon.cn/gp/product/B00L4XHH0S/ref=as_li_tf_tl?ie=UTF8&amp;amp;camp=536&amp;amp;creative=3200&amp;amp;creativeASIN=B00L4XHH0S&amp;amp;linkCode=as2&amp;amp;tag=manongio-23&amp;amp;aid=1210&amp;amp;nid=56&quot;&gt;《Redis 设计与实现》&lt;/a&gt;&lt;a href=&quot;http://weibo.com/huangz1990&quot;&gt;&lt;small&gt;黄健宏&lt;/small&gt;&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;全面而完整地讲解了 Redis 的内部机制与实现方式，对 Redis 的大多数单机功能以及所有多机功能的实现原理进行了介绍，展示了这些功能的核心数据结构以及关键的算法思想。&lt;/p&gt;
+
+&lt;h4 id=&quot;httpwwwamazoncngpproductb00kqdtz4srefaslitftlieutf8camp536creative3200creativeasinb00kqdtz4slinkcodeas2tagmanongio-23ampaid1236ampnid56&quot;&gt;&lt;a href=&quot;http://www.amazon.cn/gp/product/B00KQDTZ4S/ref=as_li_tf_tl?ie=UTF8&amp;amp;camp=536&amp;amp;creative=3200&amp;amp;creativeASIN=B00KQDTZ4S&amp;amp;linkCode=as2&amp;amp;tag=manongio-23&amp;amp;aid=1236&amp;amp;nid=56&quot;&gt;《大教堂与集市》&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;《大教堂与集市》在开源运动中的地位相当于基督教的圣经，用黑客们的话说，这是“黑客藏经阁”的第一收藏。&lt;a href=&quot;http://www.amazon.cn/gp/product/B00L2XQY0Y/ref=as_li_tf_tl?ie=UTF8&amp;amp;camp=536&amp;amp;creative=3200&amp;amp;creativeASIN=B00L2XQY0Y&amp;amp;linkCode=as2&amp;amp;tag=manongio-23&quot;&gt;Kindle 电子书&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;httpwwwamazoncngpproductb00mo7r1sgrefaslitftlieutf8camp536creative3200creativeasinb00mo7r1sglinkcodeas2tagmanongio-23ampaid1393ampnid56&quot;&gt;&lt;a href=&quot;http://www.amazon.cn/gp/product/B00MO7R1SG/ref=as_li_tf_tl?ie=UTF8&amp;amp;camp=536&amp;amp;creative=3200&amp;amp;creativeASIN=B00MO7R1SG&amp;amp;linkCode=as2&amp;amp;tag=manongio-23&amp;amp;aid=1393&amp;amp;nid=56&quot;&gt;《人件（原书第 3 版）》&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;每一个管理软件团队的人都应该阅读本书，而且应该年复一年地温习，常温常新。—— Stack Overflow 创始人之一 Joel Spolsky&lt;/p&gt;
+
+&lt;h4 id=&quot;httpwwwamazoncngpproductb00n4m0dvcrefaslitftlieutf8camp536creative3200creativeasinb00n4m0dvclinkcodeas2tagmanongio-23ampaid1444ampnid56smallsmallhttpweibocomsdxinz&quot;&gt;&lt;a href=&quot;http://www.amazon.cn/gp/product/B00N4M0DVC/ref=as_li_tf_tl?ie=UTF8&amp;amp;camp=536&amp;amp;creative=3200&amp;amp;creativeASIN=B00N4M0DVC&amp;amp;linkCode=as2&amp;amp;tag=manongio-23&amp;amp;aid=1444&amp;amp;nid=56&quot;&gt;《构建之法：现代软件工程》&lt;/a&gt;&lt;a href=&quot;http://weibo.com/sdxinz&quot;&gt;&lt;small&gt;邹欣&lt;/small&gt;&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;作者有长达 20 年的一线软件开发经验，他利用业余时间在数所高校进行了长达 6 年的软件工程教学实践，总结出了在 16 周的时间内让同学们通过“做中学”掌握实用的软件工程技术的教学计划。&lt;/p&gt;
+
+&lt;h4 id=&quot;httpwwwamazoncngpproductb00ngw4eagrefaslitftlieutf8camp536creative3200creativeasinb00ngw4eaglinkcodeas2tagmanongio-23ampaid1476ampnid56smallsmallhttpweibocommalefactor&quot;&gt;&lt;a href=&quot;http://www.amazon.cn/gp/product/B00NGW4EAG/ref=as_li_tf_tl?ie=UTF8&amp;amp;camp=536&amp;amp;creative=3200&amp;amp;creativeASIN=B00NGW4EAG&amp;amp;linkCode=as2&amp;amp;tag=manongio-23&amp;amp;aid=1476&amp;amp;nid=56&quot;&gt;《大数据日知录：架构与算法》&lt;/a&gt;&lt;a href=&quot;http://weibo.com/malefactor&quot;&gt;&lt;small&gt;张俊林&lt;/small&gt;&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;《这就是搜索引擎：核心技术详解》一书作者的新作，历时三年完成，是目前最全面梳理大数据的相关技术书籍。&lt;a href=&quot;http://vdisk.weibo.com/s/D2szyg_bVcQ4&quot;&gt;试读章节&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;httpwwwamazoncngpproductb00oy6ngdyrefaslitftlieutf8camp536creative3200creativeasinb00oy6ngdylinkcodeas2tagmanongio-23ampaid1579ampnid56smalljeffxiongsmallhttpweibocomgigix&quot;&gt;&lt;a href=&quot;http://www.amazon.cn/gp/product/B00OY6NGDY/ref=as_li_tf_tl?ie=UTF8&amp;amp;camp=536&amp;amp;creative=3200&amp;amp;creativeASIN=B00OY6NGDY&amp;amp;linkCode=as2&amp;amp;tag=manongio-23&amp;amp;aid=1579&amp;amp;nid=56&quot;&gt;《不敢止步：一个软件工匠的 12 年》&lt;/a&gt;&lt;a href=&quot;http://weibo.com/gigix&quot;&gt;&lt;small&gt;@JeffXiong&lt;/small&gt;&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;这本书不只是讲一位程序员怎么艰苦奋斗出人头地，也没打算写成程序员的职业规划励志书，而是通过朴实的文字记录一段复杂性、丰富的经历，以及这些经历对作者的塑造。&lt;/p&gt;
+
+&lt;p&gt;sources&lt;/p&gt;
+
+&lt;p&gt;[Step by step guide to install Postfix] : &lt;a href=&quot;http://flurdy.com/docs/postfix/#install_repos&quot;&gt;http://flurdy.com/docs/postfix/#install_repos&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 04 Jan 2015 19:09:57 +0800</pubDate>
+        <link>http://oiolong.github.io//linux/2015/01/04/manong-2014-collection.html</link>
+        <guid isPermaLink="true">http://oiolong.github.io//linux/2015/01/04/manong-2014-collection.html</guid>
+        
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>关于修改linux 时区到台湾的笔记</title>
@@ -1237,145 +1548,6 @@ fastcgi_param GEOIP_COUNTRY_NAME $geoip_country_name;
         
         
         <category>nginx</category>
-        
-      </item>
-    
-      <item>
-        <title>react edge backbone requirejs (未)</title>
-        <description>&lt;p&gt;&lt;strong&gt;React + Backbone + RequireJS&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Last time we looked at how to use React to render views in combination with the Backbone router. Today we’ll see how to build the latest React version and load both React and Backbone using RequireJS.&lt;/p&gt;
-
-&lt;p&gt;RequireJS is a file/module loader library which is optimised for browser use. It’s often used in the structuring of large JavaScript codebases, to load modules on demand (asynchronously).&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Please post any errors you find, or questions you have as comments on this article.
-Thanks to Wayne Berry, Ricardo Mendes and Thomas Coopman for helping to improve this!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;Building Edge React&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The version you first see, on the React homepage (&lt;a href=&quot;http://facebook.github.io/react/index.html&quot;&gt;http://facebook.github.io/react/index.html&lt;/a&gt;) is not always the most up-to date version you could use. To get the latest version, we need to follow a few steps:&lt;/p&gt;
-
-&lt;p&gt;Clone the React GitHub repo.
-Install the required NPM modules.
-Build the distribution files.
-To clone the React GitHub repo, use the following command:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/facebook/react.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Next, navigate to the new clone directory and install the required NPM modules:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Finally, build the distribution files, using Grunt:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;grunt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The first step assumes you have Git command-line utility installed (http://git-scm.com). The second, that you have NPM command-line utility installed (https://npmjs.org). The third, that you have Grunt command-line utility installed (http://gruntjs.com). I won’t walk you through installing them.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;After Grunt has finished compiling the React source-code, you will see a build folder, filled with compiled JavaScript files. The ones you are probably looking for are react[-with-addons].js and JSXTransformer.js. There are also NPM-friendly modules, if you’re looking to run React in Node.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;It’s not always the best idea to use an edge version of React. The version I just compiled is clearly marked as an alpha version, and these are not always production ready.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;Using RequireJS&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;RequireJS is just another JavaScript library. Download the source at: &lt;a href=&quot;http://requirejs.org/docs/download.html&quot;&gt;http://requirejs.org/docs/download.html&lt;/a&gt;. You’ll then need to include it in your HTML page:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;script data-main=&quot;main.js&quot; src=&quot;require.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;If you’re structuring your JavaScript codebase the usual way, this will be the only script file you need to include directly. Everything else should be loaded asynchronously, and the origin of this loading will be the contents of main.js.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Every application needs an entry-point. The first bit of JavaScript to load all other JavaScript. That happens in main.js. You can call it whatever you like, but you should include it in the data-main attribute or RequireJS won’t know how to bootstrap your application code.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;You can learn more about RequireJS at: &lt;a href=&quot;http://requirejs.org&quot;&gt;http://requirejs.org&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;Holding Backbone’s Hand&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;RequireJS support is virtually non-existent in Backbone. I’m not sure why this should be, as it’s trivial to support RequireJS without sweeping changes to Backbone’s codebase, but there you have it.&lt;/p&gt;
-
-&lt;p&gt;As previously seen, Backbone requires jQuery (http://jquery.com/
-download) and Underscore (http://underscorejs.org), so go ahead and download these. Don’t link them yet, as we will do this in main.js.&lt;/p&gt;
-
-&lt;p&gt;These libraries typically register themselves in the global namespace. That’s on the opposite end of the spectrum to RequireJS. Unfortunately, Backbone doesn’t care, so we need to continue to include them in the global namespace for Backbone to work.&lt;/p&gt;
-
-&lt;p&gt;This is done, in RequireJS, with what’s called a shim configuration. My main.js file looks like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;require.config({
-  &quot;baseUrl&quot; : &quot;/js&quot;,
-  &quot;paths&quot;   : {
-    &quot;jquery&quot;     : &quot;path/to/jquery&quot;,
-    &quot;underscore&quot; : &quot;paht/to/underscore&quot;,
-    &quot;backbone&quot;   : &quot;path/to/backbone&quot;,
-    &quot;react&quot;      : &quot;path/to/react&quot;
-  },
-  &quot;shim&quot; : {
-    &quot;backbone&quot; : {
-      &quot;deps&quot; : [
-        &quot;jquery&quot;,
-        &quot;underscore&quot;
-      ],
-      &quot;exports&quot; : &quot;Backbone&quot;
-    },
-    &quot;jquery&quot; : {
-      &quot;exports&quot; : &quot;$&quot;
-    },
-    &quot;underscore&quot; : {
-      &quot;exports&quot; : &quot;_&quot;
-    }
-  }
-});
- 
-require([&quot;backbone&quot;, &quot;router&quot;], function(Backbone, Router) {
-  new Router();
-  Backbone.history.start();
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;My router.js file looks like this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;define([&quot;backbone&quot;], function(Backbone) {
-  return Backbone.Router.extend({
-    routes : {
-      &quot;&quot; : &quot;index&quot;
-    },
-    index : function() {
-      console.log(&quot;hello world&quot;);
-    }
-  });
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We’re doing a number of important things in the RequireJS configuration:&lt;/p&gt;
-
-&lt;p&gt;set the JavaScript root directory so RequireJS knows where to begin looking for module files.
-We define a number of module aliases. These are shortcut alternatives to defining the entire file path when needing to include a module like jquery.
-We create the shim configuration for Backbone, specifying dependencies, and what each of them export for Backbone’s use.
-I mentioned that the bootstrapping (entry-point) of the application code happens in main.js. That’s what the bottom bit is about — we require the router, instantiate it and start Backbone’s history. We could do this in an external module file, or whatever. It’s not important.&lt;/p&gt;
-
-&lt;p&gt;sources&lt;/p&gt;
-
-&lt;p&gt;[react-tutorials] : &lt;a href=&quot;https://medium.com/react-tutorials/react-edge-backbone-requirejs-15602e6f88fa&quot;&gt;https://medium.com/react-tutorials/react-edge-backbone-requirejs-15602e6f88fa&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 26 Nov 2014 01:54:57 +0800</pubDate>
-        <link>http://oiolong.github.io//react/2014/11/26/react-edge-backbone-requirejs.html</link>
-        <guid isPermaLink="true">http://oiolong.github.io//react/2014/11/26/react-edge-backbone-requirejs.html</guid>
-        
-        
-        <category>react</category>
         
       </item>
     
