@@ -6,9 +6,67 @@
 </description>
     <link>http://oiolong.github.io//</link>
     <atom:link href="http://oiolong.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 04 Jan 2015 13:19:32 +0800</pubDate>
-    <lastBuildDate>Sun, 04 Jan 2015 13:19:32 +0800</lastBuildDate>
+    <pubDate>Wed, 14 Jan 2015 16:27:04 +0800</pubDate>
+    <lastBuildDate>Wed, 14 Jan 2015 16:27:04 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>快速搬服务器的笔记</title>
+        <description>&lt;p&gt;serverA to serverB&lt;/p&gt;
+
+&lt;p&gt;login to serverA&lt;/p&gt;
+
+&lt;h1 id=&quot;rsync-dirs&quot;&gt;1 rsync dirs&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;rsync -av /home/* root@serverB:/home/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;rsync-php--nginx&quot;&gt;2 rsync php &amp;amp; nginx&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;rsync -av /usr/local/lib/php serverB:/usr/local/lib/
+rsync -av /usr/local/php serverB:/usr/local/
+rsync -av /usr/local/sbin/php-fpm serverB:/usr/local/sbin/php-fpm
+rsync -av /usr/local/etc/php-fpm.conf serverB:/usr/local/etc/php-fpm.conf
+rsync -av /etc/init.d/php-fpm serverB:/etc/init.d/php-fpm
+rsync -av /usr/local/var serverB:/usr/local/
+rsync -av /usr/local/webserver serverB:/usr/local/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;backu-mysql&quot;&gt;3 backu mysql&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/bin/innobackupex --user=root --password=&#39;pw&#39; /$dir --no-timestamp  
+ 	/usr/bin/innobackupex --user=root --password=&#39;pw&#39; --apply-log /$dir
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;login to serverB&lt;/p&gt;
+
+&lt;h1 id=&quot;yum-libs&quot;&gt;4 yum libs&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;yum install make libjpeg-devel.x86_64 libpng-devel.x86_64 pcre-devel.x86_64 libxml2-devel.x86_64 openssl-devel.x86_64 curl-devel.x86_64 gd.x86_64 libXpm-devel.x86_64 gd-devel.x86_64 curl-devel.x86_64 libidn.x86_64 libidn-devel.x86_64 autoconf.noarch gcc.x86_64 vim-enhanced.x86_64 screen.x86_64 ntp.x86_64 libxml2-devel.x86_64 openssl-devel.x86_64 curl-devel.x86_64 libmcrypt-devel.x86_64 mhash-devel.x86_64 libevent-devel.x86_64 libcurl-devel.x86_64 git gcc-c++ pcre-dev pcre-devel zlib-devel make tcl-devel.x86_64
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;yum-percona&quot;&gt;5 yum percona&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;yum install Percona-Server-client-55 Percona-Server-server-55 percona-xtrabackup
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;copy-back-mysql&quot;&gt;6 copy back mysql&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;innobackupex --copy-back /$dbdir
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;link-mysqlsock&quot;&gt;7 link mysql.sock&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;ln -sf /var/lib/mysql/mysql.sock /tmp/mysql.sock
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
+        <pubDate>Thu, 15 Jan 2015 00:09:57 +0800</pubDate>
+        <link>http://oiolong.github.io//linux/2015/01/15/move-from-one-server-to-another-quickly.html</link>
+        <guid isPermaLink="true">http://oiolong.github.io//linux/2015/01/15/move-from-one-server-to-another-quickly.html</guid>
+        
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>码农周刊2014技术干货</title>
@@ -1480,74 +1538,6 @@ Inactive : The number of days after password expires that account is disabled&lt
         
         
         <category>linux</category>
-        
-      </item>
-    
-      <item>
-        <title>nginx 安装geoip 和php 设置</title>
-        <description>&lt;p&gt;&lt;strong&gt;Compile nginx With GeoIP Module&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;wget http://nginx.org/download/nginx-0.8.52.tar.gz
- tar -zxvf nginx-0.8.52.tar.gz
- cd nginx-0.8.52
- yum install gcc pcre-devel.x86_64 openssl-devel.x86_64
- ./configure --with-http_geoip_module
- make
- make install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;nginx Configuration&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Edit nginx.conf, enter:&lt;/p&gt;
-
-&lt;p&gt;Locate http section and update it as follows for geoip country lookup:&lt;/p&gt;
-
-  	geoip_country /usr/local/share/GeoIP/GeoIP.dat;
-
-&lt;pre&gt;&lt;code&gt;fastcgi_param GEOIP_COUNTRY_CODE $geoip_country_code;
-fastcgi_param GEOIP_COUNTRY_CODE3 $geoip_country_code3;
-fastcgi_param GEOIP_COUNTRY_NAME $geoip_country_name;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Save and close the file. If you want city level geo targeting set it as follows:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;PHP Test Script&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Create a php test script as follows geoip.php&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-  &amp;lt;title&amp;gt;What is my IP address - determine or retrieve my IP address&amp;lt;/title&amp;gt;
- &amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
- &amp;lt;?php
-     if (getenv(HTTP_X_FORWARDED_FOR)) {
-        $pipaddress = getenv(HTTP_X_FORWARDED_FOR);
-        $ipaddress = getenv(REMOTE_ADDR);
-        echo &quot;Your Proxy IP address is : &quot;.$pipaddress. &quot; (via $ipaddress) &quot; ;
-    } else {
-        $ipaddress = getenv(REMOTE_ADDR);
-        echo &quot;Your IP address is : $ipaddress&quot;;
-    }
-    $country = getenv(GEOIP_COUNTRY_NAME);
-    $country_code = getenv(GEOIP_COUNTRY_CODE);
-    echo &quot;&amp;lt;br/&amp;gt;Your country : $country ( $country_code ) &quot;;
-?&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;sources&lt;/p&gt;
-
-&lt;p&gt;[cyberciti] : &lt;a href=&quot;http://www.cyberciti.biz/faq/linux-unix-nginx-geoip-module-configuration/&quot;&gt;http://www.cyberciti.biz/faq/linux-unix-nginx-geoip-module-configuration/&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 26 Nov 2014 01:56:57 +0800</pubDate>
-        <link>http://oiolong.github.io//nginx/2014/11/26/nginx-Install-GeoIP-Module-For-Country-:-City-Level-Geo-Targeting.html</link>
-        <guid isPermaLink="true">http://oiolong.github.io//nginx/2014/11/26/nginx-Install-GeoIP-Module-For-Country-:-City-Level-Geo-Targeting.html</guid>
-        
-        
-        <category>nginx</category>
         
       </item>
     
