@@ -6,9 +6,9 @@
 </description>
     <link>http://oiolong.github.io//</link>
     <atom:link href="http://oiolong.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 14 Jan 2015 16:27:04 +0800</pubDate>
-    <lastBuildDate>Wed, 14 Jan 2015 16:27:04 +0800</lastBuildDate>
-    <generator>Jekyll v2.4.0</generator>
+    <pubDate>Tue, 03 Nov 2015 16:38:05 +0800</pubDate>
+    <lastBuildDate>Tue, 03 Nov 2015 16:38:05 +0800</lastBuildDate>
+    <generator>Jekyll v3.0.0</generator>
     
       <item>
         <title>快速搬服务器的笔记</title>
@@ -437,8 +437,8 @@ fi
 &lt;p&gt;[baid echarts] : &lt;a href=&quot;http://echarts.baidu.com/doc/example.html&quot;&gt;http://echarts.baidu.com/doc/example.html&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 31 Dec 2014 19:01:57 +0800</pubDate>
-        <link>http://oiolong.github.io//linux/2014/12/31/Redis-save-and-backup-script.html</link>
-        <guid isPermaLink="true">http://oiolong.github.io//linux/2014/12/31/Redis-save-and-backup-script.html</guid>
+        <link>http://oiolong.github.io//linux/2014/12/31/redis-save-and-backup-script.html</link>
+        <guid isPermaLink="true">http://oiolong.github.io//linux/2014/12/31/redis-save-and-backup-script.html</guid>
         
         
         <category>linux</category>
@@ -464,27 +464,6 @@ Now will open the main postfix configuration file:&lt;/p&gt;
         <pubDate>Tue, 30 Dec 2014 00:49:57 +0800</pubDate>
         <link>http://oiolong.github.io//linux/2014/12/30/install-postfix-mail-server.html</link>
         <guid isPermaLink="true">http://oiolong.github.io//linux/2014/12/30/install-postfix-mail-server.html</guid>
-        
-        
-        <category>linux</category>
-        
-      </item>
-    
-      <item>
-        <title>关于php composer 的安装笔记</title>
-        <description>&lt;p&gt;very ez&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;curl -sS https://getcomposer.org/installer | php
-mv composer.phar /usr/local/bin/composer
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;sources&lt;/p&gt;
-
-&lt;p&gt;[getcomposer getting started] : &lt;a href=&quot;https://getcomposer.org/doc/00-intro.md&quot;&gt;https://getcomposer.org/doc/00-intro.md&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 06 Dec 2014 07:52:57 +0800</pubDate>
-        <link>http://oiolong.github.io//linux/2014/12/06/install-php-composer.html</link>
-        <guid isPermaLink="true">http://oiolong.github.io//linux/2014/12/06/install-php-composer.html</guid>
         
         
         <category>linux</category>
@@ -532,6 +511,27 @@ mv composer.phar /usr/local/bin/composer
         <pubDate>Sat, 06 Dec 2014 07:52:57 +0800</pubDate>
         <link>http://oiolong.github.io//linux/2014/12/06/install-openresty.html</link>
         <guid isPermaLink="true">http://oiolong.github.io//linux/2014/12/06/install-openresty.html</guid>
+        
+        
+        <category>linux</category>
+        
+      </item>
+    
+      <item>
+        <title>关于php composer 的安装笔记</title>
+        <description>&lt;p&gt;very ez&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;sources&lt;/p&gt;
+
+&lt;p&gt;[getcomposer getting started] : &lt;a href=&quot;https://getcomposer.org/doc/00-intro.md&quot;&gt;https://getcomposer.org/doc/00-intro.md&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 06 Dec 2014 07:52:57 +0800</pubDate>
+        <link>http://oiolong.github.io//linux/2014/12/06/install-php-composer.html</link>
+        <guid isPermaLink="true">http://oiolong.github.io//linux/2014/12/06/install-php-composer.html</guid>
         
         
         <category>linux</category>

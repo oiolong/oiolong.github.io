@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>allen's notes</title>
+    <title>快速搬服务器的笔记</title>
     <meta name="description" content="about blog Google search results) and in your feed.xml site description. 
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://oiolong.github.io//">
+    <link rel="canonical" href="http://oiolong.github.io//linux/2015/01/15/how-to-install-less-on-centos.html">
 </head>
 
 
@@ -54,151 +54,64 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">快速搬服务器的笔记</h1>
+    <p class="post-meta">Jan 15, 2015</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Jan 15, 2015</span>
+  <article class="post-content">
+    <p>serverA to serverB</p>
 
-        <h2>
-          <a class="post-link" href="/linux/2015/01/15/move-from-one-server-to-another-quickly.html">快速搬服务器的笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 4, 2015</span>
+<p>login to serverA</p>
 
-        <h2>
-          <a class="post-link" href="/linux/2015/01/04/manong-2014-collection.html">码农周刊2014技术干货</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 31, 2014</span>
+<h1 id="rsync-dirs">1 rsync dirs</h1>
 
-        <h2>
-          <a class="post-link" href="/linux/2014/12/31/change-timezone-in-linux.html">关于修改linux 时区到台湾的笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 31, 2014</span>
+<pre><code>rsync -av /home/* root@serverB:/home/
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/linux/2014/12/31/redis-save-and-backup-script.html">关于redis 备份的笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 30, 2014</span>
+<h1 id="rsync-php--nginx">2 rsync php &amp; nginx</h1>
 
-        <h2>
-          <a class="post-link" href="/linux/2014/12/30/install-postfix-mail-server.html">关于postfix mail server  的安装笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 6, 2014</span>
+<pre><code>rsync -av /usr/local/lib/php serverB:/usr/local/lib/
+rsync -av /usr/local/php serverB:/usr/local/
+rsync -av /usr/local/sbin/php-fpm serverB:/usr/local/sbin/php-fpm
+rsync -av /usr/local/etc/php-fpm.conf serverB:/usr/local/etc/php-fpm.conf
+rsync -av /etc/init.d/php-fpm serverB:/etc/init.d/php-fpm
+rsync -av /usr/local/var serverB:/usr/local/
+rsync -av /usr/local/webserver serverB:/usr/local/
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/linux/2014/12/06/install-openresty.html">关于php composer 的安装笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 6, 2014</span>
+<h1 id="backu-mysql">3 backu mysql</h1>
 
-        <h2>
-          <a class="post-link" href="/linux/2014/12/06/install-php-composer.html">关于php composer 的安装笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 2, 2014</span>
+<pre><code>/usr/bin/innobackupex --user=root --password='pw' /$dir --no-timestamp  
+ 	/usr/bin/innobackupex --user=root --password='pw' --apply-log /$dir
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/2014/12/02/memo.html">Memo</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 30, 2014</span>
+<p>login to serverB</p>
 
-        <h2>
-          <a class="post-link" href="/linux/2014/11/30/linux-kernel-coding-style.html">关于linux kernel coding style 的笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 27, 2014</span>
+<h1 id="yum-libs">4 yum libs</h1>
+<pre><code>yum install make libjpeg-devel.x86_64 libpng-devel.x86_64 pcre-devel.x86_64 libxml2-devel.x86_64 openssl-devel.x86_64 curl-devel.x86_64 gd.x86_64 libXpm-devel.x86_64 gd-devel.x86_64 curl-devel.x86_64 libidn.x86_64 libidn-devel.x86_64 autoconf.noarch gcc.x86_64 vim-enhanced.x86_64 screen.x86_64 ntp.x86_64 libxml2-devel.x86_64 openssl-devel.x86_64 curl-devel.x86_64 libmcrypt-devel.x86_64 mhash-devel.x86_64 libevent-devel.x86_64 libcurl-devel.x86_64 git gcc-c++ pcre-dev pcre-devel zlib-devel make tcl-devel.x86_64
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/linux/2014/11/27/move-users-to-another-server-tips.html">关于centos 快速搬移用户的一些纪录</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 26, 2014</span>
+<h1 id="yum-percona">5 yum percona</h1>
+<pre><code>yum install Percona-Server-client-55 Percona-Server-server-55 percona-xtrabackup
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/nginx/2014/11/26/nginx-install-geoip-module-for-country-city-level-geo-targeting.html">nginx 安装geoip 和php 设置</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 26, 2014</span>
+<h1 id="copy-back-mysql">6 copy back mysql</h1>
 
-        <h2>
-          <a class="post-link" href="/react/2014/11/26/react-edge-backbone-requirejs.html">react edge backbone requirejs (未)</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 26, 2014</span>
+<pre><code>innobackupex --copy-back /$dbdir
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/webpack/2014/11/26/the-next-requirejs-webpack.html">webpack : the next requireJS</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 25, 2014</span>
+<h1 id="link-mysqlsock">7 link mysql.sock</h1>
 
-        <h2>
-          <a class="post-link" href="/nginx/2014/11/25/nginx-php-framework-wreite-setting-tips.html">关于nginx php framework rewrite 的一些纪录</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 25, 2014</span>
+<pre><code>ln -sf /var/lib/mysql/mysql.sock /tmp/mysql.sock
 
-        <h2>
-          <a class="post-link" href="/nginx/2014/11/25/nginx-nginx-lua-setting-tips.html">关于nginx nginx lua 的一些纪录</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 25, 2014</span>
 
-        <h2>
-          <a class="post-link" href="/nginx/2014/11/25/nginx-geoip-setting-tips.html">关于nginx geoip 的一些纪录</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 24, 2014</span>
+I
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2014/11/24/welcome-to-jekyll.html">Welcome to Atom's notes!</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  </article>
 
 </div>
 

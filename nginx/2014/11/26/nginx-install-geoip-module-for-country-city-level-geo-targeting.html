@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>allen's notes</title>
+    <title>nginx 安装geoip 和php 设置</title>
     <meta name="description" content="about blog Google search results) and in your feed.xml site description. 
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://oiolong.github.io//">
+    <link rel="canonical" href="http://oiolong.github.io//nginx/2014/11/26/nginx-install-geoip-module-for-country-city-level-geo-targeting.html">
 </head>
 
 
@@ -54,151 +54,72 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">nginx 安装geoip 和php 设置</h1>
+    <p class="post-meta">Nov 26, 2014</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Jan 15, 2015</span>
+  <article class="post-content">
+    <p><strong>Compile nginx With GeoIP Module</strong></p>
 
-        <h2>
-          <a class="post-link" href="/linux/2015/01/15/move-from-one-server-to-another-quickly.html">快速搬服务器的笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 4, 2015</span>
+<pre><code>wget http://nginx.org/download/nginx-0.8.52.tar.gz
+ tar -zxvf nginx-0.8.52.tar.gz
+ cd nginx-0.8.52
+ yum install gcc pcre-devel.x86_64 openssl-devel.x86_64
+ ./configure --with-http_geoip_module
+ make
+ make install
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/linux/2015/01/04/manong-2014-collection.html">码农周刊2014技术干货</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 31, 2014</span>
+<p><strong>nginx Configuration</strong></p>
 
-        <h2>
-          <a class="post-link" href="/linux/2014/12/31/change-timezone-in-linux.html">关于修改linux 时区到台湾的笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 31, 2014</span>
+<p>Edit nginx.conf, enter:</p>
 
-        <h2>
-          <a class="post-link" href="/linux/2014/12/31/redis-save-and-backup-script.html">关于redis 备份的笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 30, 2014</span>
+<p>Locate http section and update it as follows for geoip country lookup:</p>
 
-        <h2>
-          <a class="post-link" href="/linux/2014/12/30/install-postfix-mail-server.html">关于postfix mail server  的安装笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 6, 2014</span>
+  	geoip_country /usr/local/share/GeoIP/GeoIP.dat;
 
-        <h2>
-          <a class="post-link" href="/linux/2014/12/06/install-openresty.html">关于php composer 的安装笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 6, 2014</span>
+<pre><code>fastcgi_param GEOIP_COUNTRY_CODE $geoip_country_code;
+fastcgi_param GEOIP_COUNTRY_CODE3 $geoip_country_code3;
+fastcgi_param GEOIP_COUNTRY_NAME $geoip_country_name;
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/linux/2014/12/06/install-php-composer.html">关于php composer 的安装笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 2, 2014</span>
+<p>Save and close the file. If you want city level geo targeting set it as follows:</p>
 
-        <h2>
-          <a class="post-link" href="/2014/12/02/memo.html">Memo</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 30, 2014</span>
+<p><strong>PHP Test Script</strong></p>
 
-        <h2>
-          <a class="post-link" href="/linux/2014/11/30/linux-kernel-coding-style.html">关于linux kernel coding style 的笔记</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 27, 2014</span>
+<p>Create a php test script as follows geoip.php</p>
 
-        <h2>
-          <a class="post-link" href="/linux/2014/11/27/move-users-to-another-server-tips.html">关于centos 快速搬移用户的一些纪录</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 26, 2014</span>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;What is my IP address - determine or retrieve my IP address&lt;/title&gt;
+ &lt;/head&gt;
+&lt;body&gt;
+ &lt;?php
+     if (getenv(HTTP_X_FORWARDED_FOR)) {
+        $pipaddress = getenv(HTTP_X_FORWARDED_FOR);
+        $ipaddress = getenv(REMOTE_ADDR);
+        echo "Your Proxy IP address is : ".$pipaddress. " (via $ipaddress) " ;
+    } else {
+        $ipaddress = getenv(REMOTE_ADDR);
+        echo "Your IP address is : $ipaddress";
+    }
+    $country = getenv(GEOIP_COUNTRY_NAME);
+    $country_code = getenv(GEOIP_COUNTRY_CODE);
+    echo "&lt;br/&gt;Your country : $country ( $country_code ) ";
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/nginx/2014/11/26/nginx-install-geoip-module-for-country-city-level-geo-targeting.html">nginx 安装geoip 和php 设置</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 26, 2014</span>
+<p>sources</p>
 
-        <h2>
-          <a class="post-link" href="/react/2014/11/26/react-edge-backbone-requirejs.html">react edge backbone requirejs (未)</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 26, 2014</span>
+<p>[cyberciti] : <a href="http://www.cyberciti.biz/faq/linux-unix-nginx-geoip-module-configuration/">http://www.cyberciti.biz/faq/linux-unix-nginx-geoip-module-configuration/</a></p>
 
-        <h2>
-          <a class="post-link" href="/webpack/2014/11/26/the-next-requirejs-webpack.html">webpack : the next requireJS</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 25, 2014</span>
 
-        <h2>
-          <a class="post-link" href="/nginx/2014/11/25/nginx-php-framework-wreite-setting-tips.html">关于nginx php framework rewrite 的一些纪录</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 25, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/nginx/2014/11/25/nginx-nginx-lua-setting-tips.html">关于nginx nginx lua 的一些纪录</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 25, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/nginx/2014/11/25/nginx-geoip-setting-tips.html">关于nginx geoip 的一些纪录</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 24, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2014/11/24/welcome-to-jekyll.html">Welcome to Atom's notes!</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  </article>
 
 </div>
 
